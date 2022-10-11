@@ -36,7 +36,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/YTALIEN || Github
-  fas fa-envelope: 1071240904@qq.com || Email
+  fas fa-envelope: https://mail.qq.com/ || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -69,7 +69,7 @@ mathjax:
 # KaTeX
 katex:
   enable: true
-  per_page: false
+  per_page: true
   hide_scrollbar: true
 
 # Image (圖片設置)
@@ -87,10 +87,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: 'linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)'
+index_img: /img/homepage.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: 'linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)'
+default_top_img: /img/homepage.jpg
 
 # The banner image of archive page
 archive_img:
@@ -127,6 +127,11 @@ cover:
     - /img/default_back2.jpg
     - /img/default_back3.png
     - /img/default_back4.png
+    - /img/default_back5.png
+    - /img/default_back6.png
+    - /img/default_back7.png
+    - /img/default_back8.png
+    - /img/default_back9.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -136,7 +141,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: '页面飞到了外太空'
+  subtitle: 'oops！页面飞到了外太空'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -181,7 +186,7 @@ anchor: false
 toc:
   post: true
   page: false
-  number: true
+  number: false
   expand: false
   style_simple: false # for post
 
@@ -215,7 +220,7 @@ post_edit:
 related_post:
   enable: true
   limit: 3 # Number of posts displayed
-  date_type: created # or created or updated 文章日期顯示創建日或者更新日
+  date_type: updated # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (圖片描述文字)
 photofigcaption: false
@@ -550,7 +555,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: true
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: '255,192,203' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -614,7 +619,7 @@ blog_title_font:
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
   enable: true
-  icon: # the unicode value of Font Awesome icon, such as '\3423'
+  icon: '\f561' # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
 # the subtitle on homepage (主頁subtitle)
@@ -660,12 +665,12 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
+      icon: fas fa-star
       text: 加入书签
       link: https://ytalien.github.io/
   card_announcement:
     enable: true
-    content: 来到这里就是我的朋友！
+    content: 来到这里就是我的朋友！有任何问题欢迎评论ヾ(≧▽≦*)o
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -705,12 +710,12 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 10/10/2022 18:00:00
+  publish_date: 10/10/2022 20:00:00
 
 # Aside widget - Newest Comments
 # 这个功能开启了似乎会报错
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -745,7 +750,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: true
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
