@@ -1,13 +1,14 @@
 ---
 title: 基于分类模型的超多目标优化算法
-data: 2022-10-10 21:52:00
 categories:
-- 论文精读
+  - 多目标优化相关论文精读
 tags:
-- 数据驱动
-- 多目标优化
-- 分类模型
-
+  - 数据驱动
+  - 多目标优化
+  - 分类模型
+  - on-line data-driven
+abbrlink: a93a8d46
+data: 2022-10-11 17:00:00
 ---
 ## 《A Classification Based Surrogate-Assisted Evolutionary Algorithm for Expensive Many-Objective Optimization》</span>
 
@@ -75,7 +76,7 @@ K：所需要选择解的个数=参考解的个数=种群大小
 $Con$：在目标空间里计算理想点和待选点之间的欧式距离来计算收敛性
 $Crowd$：在径向空间里同一个网格内被选择的点的个数来计算分布性
 
-==关于径向过程的参考==：<font size="2">**《A radial space division based evolutionary algorithm for many-objective optimization》</font>**
+==关于径向过程的参考==： <font size="2">**《A radial space division based evolutionary algorithm for many-objective optimization》</font>**
 一个m维的向量根据径向权重参数矩阵$W_1$和$W_2$可以投影到2维的空间中，根据n和$B_l$，$B_u$可以将2维径向空间分成$m/n$个网格，每个网格有一个$crowd(G_s)$表示这个网格内解的个数；每个解有一个con（P）表示这个解的收敛性，$con(P)=||\frac {P-min\;P}{max \; P-min \;P}||$表示这个解离当前种群中最优解的距离（标准化）。
 
 进行K次循环，每次循环先找一个crowd最小的网格，在该网格内计算$Fit(Q,P_R)$值，得到最小的解，将该个体放入待参考的种群中，将该解从原始种群中除去，更新该解所在的网格crowd=crowd+1，这样求得的解应该是在满足分布性的基础上收敛性最好的解。最后得到K个带参考解

@@ -5,7 +5,7 @@
 # Site
 title: YT舒适区
 subtitle: ''
-description: Done is better than perfect
+description: There is more to come
 keywords:
 author: YTALIEN
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://YTALIEN.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
