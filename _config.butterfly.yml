@@ -37,7 +37,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/YTALIEN || Github
-  fas fa-envelope: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1ufm4efk4ubv5uKWp6f4tbm7 || Email
+  fas fa-envelope: mailto:1071240904@qq.com || Email
   fa-brands fa-zhihu: https://www.zhihu.com/people/bai-nian-gu-du-49-31 || Zhihu
 
 # search (搜索)

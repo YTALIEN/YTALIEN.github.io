@@ -76,7 +76,9 @@ $P_{ref}=\{ x_{ref}^1,x_{ref}^2,...,x_{ref}^k\}$
 <center><font size="2">图3 基于PBI的数据分割</font></center>
 
 
-根据PBI方法，当一个解满足$$g^{pbi}(F(x)|F(x^{i^*}_{ref}),Z)<||F(x_{ref}^{i^*})-Z||\quad i^*=arg max_{i \in \{1,...,k \}}cos(\theta _i)\tag{1}$$我们就说这个解是非支配的。
+根据PBI方法，当一个解满足
+$$g^{pbi}(F(x)|F(x^{i^*}_{ref}),Z)<||F(x_{ref}^{i^*})-Z||\quad i^*=arg max_{i \in \{1,...,k \}}cos(\theta _i)\tag{1}$$
+我们就说这个解是非支配的。
 根据二分搜索找到PBI的惩罚因子$\delta$的最适区间，使得分类之后的$P_n和P_d$个体数量尽量接近
 
 这里和传统的支配关系的分割稍有一点不一样，这样可以更好地利用有限的参考点，使得被支配的和非支配的尽量均衡

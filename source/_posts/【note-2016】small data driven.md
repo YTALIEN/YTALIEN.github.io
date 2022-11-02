@@ -7,7 +7,7 @@ tags:
   - 多目标优化
   - 回归模型
   - off-line data-driven
-abbrlink: 5fb4b4fd
+
 data: 2022-10-11 16:35:00
 ---
 
@@ -15,8 +15,17 @@ data: 2022-10-11 16:35:00
 
 ### 《Small Data Driven Evolutionary Multi-objective Optimization of Fused Magnesium Furnaces》
 
-#### **摘要**
-一个off-line的数据驱动的多目标优化算法，使用GP模型来经过一次次的优化EI（expected improvement），最终选择EI最高的解构成PF，并将其嵌入NSGA-Ⅱ、MOEA/D和RVEA中进行对比
+#### abstract
+这篇文章是完全面向一个具体工业问题的，一个化工界的熔镁炉（机翻，Fused Magnesium Furnaces），在这个应用背景下，可以得到的只有一小部分离线的，且带有噪声的数据（实验误差），这篇文章干了啥呢？提出一个高斯模型的SAEA方法，基于NSGA-Ⅱ进行种群更新优化，并且自己建立了一个二阶多重回归模型来近似真实的fitness function。
+
+#### introduction
+1、一个低阶的多项式回归可以减少维度灾难和过拟合问题
+
+#### 我的思考
+1、为啥建立了一个低阶的多重回归之后还要使用高斯模型来做模型辅助？
+它其实相当于做了一个伪on-line的模型。使用一个二阶多项式回归来近似真实的FE，并且在每一代的进化中可以使用这FE来更新数据，训练模型。
+因为这个近似的FE其实是一个global的模型，当种群不断进化收敛到局部local的时候，这个模型的效果是很差的，这个FE主要是辅助高斯模型在进化后期也会由于收敛到local这个原因进行重新评估，更新数据。
+
 ##### **1、算法框架**
 <center><img src="/images/2022-10/4.jpg" alt="img" style="zoom:70%" /></center>
 <center>
@@ -24,22 +33,22 @@ data: 2022-10-11 16:35:00
 </center>
 
 ##### **2、细节说明**
-###### **历史数据**
-即离线数据，但是随着算法产生新解（未必最优）会进行更新，最后得到的就是根据该算法得到的最优解（真实问题中未必是最优）
 
 ###### **历史数据的生成**
-* 使用LHS从标准测试数据中采样得到决策变量
-* 使用真实的适应度函数来评估这些点
-* 人工合成噪声加入这些被评估之后值里，作为历史数据，对于第j个目标函数值(j=1,...,M)的噪声定义：$$noise=(f_{jmax}-f_{jmin}) \times rand$$这里的rand是一个[-0.1,0.1]之间的随机数
+使用LHS采样，但是加入人工噪声（模拟现实情况）对于第j个目标函数值(j=1,...,M)的噪声定义：
+$$noise=(f_{jmax}-f_{jmin}) \times rand$$
+这里的rand是一个[-0.1,0.1]之间的随机数
 
 
 ###### **二阶多项式模型$m_L$**
-由初始的离线数据进行训练得到。该模型用于计算FE，选择个体。
+由初始的离线数据进行训练得到。该模型用于计算近似的FE，更新。
 对于每一个“（目标，变量）”对建立一个$m_L$，因此会有$M \times N$个二阶多项式模型(second-order polynomial regression)。其中，M代表目标个数，N代表决策变量的个数
 这里选用的是多重回归模型（multiple linear regression）
 
 ###### **数据筛选**
+会不会编故事大概就看这些了(～￣▽￣)～
 并不是用所有的离线数据构建高斯模型，为了减少训练GPM的时间，从历史数据筛选其中的L个数据，如果历史数据不够，那么使用高斯模型生成。
+主要是small data嘛，所以数据的量不能太多。
 这里选用了模糊c-均值聚类方法，详见<font size="1" color="green">《Expensive multiobjective optimization by MOEA/D with Gaussian Process Model》</font>
 
 ###### **高斯模型（Guassion process model **GPM**）$m_G$**

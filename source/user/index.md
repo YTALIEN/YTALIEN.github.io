@@ -12,7 +12,7 @@ type: "user"
 
 ## <center>How to reach me<center>
 
-* 电子邮箱：201930234149@mail.scut.edu.cn
+* 电子邮箱：<a href="mailto:1071240904@qq.com">1071240904@qq.com</a>
 * GitHub：https://github.com/YTALIEN
 
 
