@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>好久不见</title>
+      <link href="/2024/03/28/%E3%80%90think-2%E3%80%91%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/"/>
+      <url>/2024/03/28/%E3%80%90think-2%E3%80%91%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/</url>
+      
+        <content type="html"><![CDATA[<p>经过了一年的科研学习，现在总算是小有成果，有两篇文章，还算不赖，终于想起了这个放下了很久的博客，所以决定回归，写一篇小文章。</p><p>最近放慢了脚步，还在前期调研阅读阶段，并不容易，需要自己独立找到一个选题和任务去做。最近实验室，老师因为产假原因，所以步调比较慢，因此更需要靠自己的self-drive做事情，而我们这个方向，基本上我算开山之弟子，课题组里其他人也都是还无成果，甚至还在入门。不容易。</p><p>经历了response和review的多重考验，对科研有了更多的一些思考。</p><ul><li><strong>paper is preferred.</strong> 文章一定是优先的，所以polish非常重要，如果说前期工作是6成，那么后期paper一定是会占满剩下部分的。</li><li><strong>chase for the hot point.</strong> 科研大部分是功利的，新出现的事物一定会有很多人去占坑的，永远追逐热点，永远抢占发文，这些现象永远不会停止。比如最近的LLM，后面有机会再单开文章讲述这个热点。</li><li><strong>Balance life and work.</strong> 科研是一项虽紧急却又漫长的工作，不能总是时时刻刻保持紧绷，所以适当的休息和放松是被允许的。</li></ul><p>后面的想到再继续写，先这样。</p><p>Long time no see.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习思考 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 研究生 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于numpy的维度小总结</title>
       <link href="/2022/11/18/%E3%80%90python-1%E3%80%91numpy-s-axis/"/>
       <url>/2022/11/18/%E3%80%90python-1%E3%80%91numpy-s-axis/</url>
